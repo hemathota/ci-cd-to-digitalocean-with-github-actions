@@ -14,8 +14,9 @@ jobs:
           key: ${{secrets.SSH_KEY}} # Private or public key of the server
           username: ${{ secrets.SSH_USERNAME }} # User of the server you want to ssh into
      
-          script: |
+          script: 
+            rm test
             mkdir test 
             cd test 
-            git clone git@github.com/hemathota/ci-cd-to-digitalocean-with-github-actions.git 
+            git clone git@github.com:hemathota/ci-cd-to-digitalocean-with-github-actions.git
             echo 'Deployment successful to digital ocean' 
